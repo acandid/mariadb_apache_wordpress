@@ -18,8 +18,8 @@ Role Variables
 
 None of the variables below are required
 
-| Variable                                     | Default                       | Comments                                                                                |
-| :---                                         | :---                          | :---                                                                                    |
+| Variable                                     | Default                       | Comments                                     |
+| :---                                         | :---                          | :---                                         |
 | `db_name`                                    |                               | Inform wordpress database name
 |
 | `db_user`                                    |                               | Inform user for database
