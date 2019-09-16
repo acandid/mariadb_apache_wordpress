@@ -21,7 +21,7 @@ None of the variables below are required
 | Variable                                     | Default                       | Comments                                     |
 | :---                                         | :---                          | :---                                         |
 | `db_name`                                    |                               | Inform wordpress database name
-|
+| :---                                         | :---                          | :---
 | `db_user`                                    |                               | Inform user for database
 |
 | `root_login`                                 |                               | user root mariadb
