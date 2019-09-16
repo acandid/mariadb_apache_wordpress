@@ -1,0 +1,34 @@
+db_name: wordpress
+#
+db_user: wordpress
+#
+db_user_password:
+#
+db_host: localhost
+#
+root_password:
+root_login: root
+#
+#install packages
+packages:
+  - apache2
+  - mariadb-server
+  - mariadb-client
+  - openssl
+  - unzip
+  - python-mysqldb
+  - php7.3
+  - php7.3-mysql
+  - php7.3-common
+#
+start_db: mariadb
+start_web: apache2
+#Web configure
+web_path: /var/www/html
+web_owner: www-data
+web_group: www-data
+#
+#
+#
+wordpress_file_path: /wordpress/wp-config.php
+wordpress_file_default: /wordpress/wp-config-sample.php

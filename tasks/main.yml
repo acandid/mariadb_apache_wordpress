@@ -1,0 +1,40 @@
+---
+# tasks file for mariadb_apache_wordpress
+- name: Include vars
+  include_vars: "{{ ansible_os_family}}.yml"
+#
+- name: Create repository for MariaDB
+  import_tasks: create_repo_rhel7.yml
+  when: ansible_os_family == 'RedHat'
+#
+- name: Install {{ packages }}
+  import_tasks: install_packages_rhel7.yml
+  when: ansible_os_family == 'RedHat'
+#
+- name: Install {{ packages }}
+  import_tasks: install_packages_deb.yml
+  when: ansible_os_family == 'Debian'
+#
+- name: Start services
+  import_tasks: start_services.yml
+#
+- name: Configure SELinux permissive mode
+  import_tasks: selinux_rhel7.yml
+  when: ansible_os_family == 'RedHat'
+#
+- name: Download WordPress
+  import_tasks: download_wordpress.yml
+#
+- name: Unarchive WordPress
+  import_tasks: unarchive_wordpress.yml
+#
+- name: Configure MariaDB
+  import_tasks: configure_mariadb.yml
+#
+- name: Configure WordPress file
+  import_tasks: configure_wordpress.yml
+#
+- name: Finish the installation at the link below
+  debug:
+    msg: "{{ ansible_default_ipv4.address }}/wordpress/wp-admin/install.php"
+...
