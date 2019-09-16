@@ -1,4 +1,3 @@
-
 #MariaDB Repo for Mariadb version 10.4
 mariadb_repo: http://yum.mariadb.org/10.4/rhel7-amd64
 mariadb_gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
@@ -33,8 +32,6 @@ start_web: httpd
 web_path: /var/www/html
 web_owner: apache
 web_group: apache
-#
-#
 #
 wordpress_file_path: /wordpress/wp-config.php
 wordpress_file_default: /wordpress/wp-config-sample.php
