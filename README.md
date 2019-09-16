@@ -44,7 +44,9 @@ Example Playbook
 
 ---
 - hosts: server
+
   roles:
+  
     - /path/mariadb_apache_wordpress
 ...
 
